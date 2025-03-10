@@ -1,0 +1,16 @@
+POST http://192.168.30.26:9090/api/generator/generator/list?page=1&limit=10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJsb2dpbiIsImxvZ2luSWQiOiIxIiwicm5TdHIiOiIzbUk3cTlMTnJhd2xuanVJYmRXU240cTV0VkhVaU82WiIsImNsaWVudElkIjoiMTk1ZGE5ZmNjZTU3NDg1MmI4NTAwNjg3NzFjZGUwMzQiLCJ0ZW5hbnRJZCI6IjEiLCJ1c2VyTmFtZSI6InJvb3QiLCJ1c2VySWQiOiIxIn0.1zYHz7QKoZn3YceJaRtIGOtlLuBjO6Io2sWDPekRMQM
+Content-Type: application/json
+
+{
+
+}
+
+<> 2025-02-24T202315.200.json
+<> 2025-02-24T202256.500.json
+<> 2025-02-24T202245.500.json
+<> 2025-02-24T202237.404.html
+<> 2025-02-24T202232.404.html
+<> 2025-02-24T202209.404.html
+<> 2025-02-24T202134.200.json
+<> 2025-02-19T200356.200.json

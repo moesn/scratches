@@ -1,0 +1,36 @@
+{
+  "code": 200,
+  "data": {
+    "abilityList": [
+      {
+        "name": "dsmc",
+        "title": "企业数管",
+        "publicPath": "/",
+        "script": []
+      },
+      {
+        "name": "dsmcp",
+        "title": "数管定开",
+        "publicPath": "/",
+        "script": []
+      },
+      {
+        "name": "idm",
+        "title": "流转监测",
+        "publicPath": "/",
+        "script": [
+          "script/icons/dfs.js",
+          "script/highlight.min.js"
+        ]
+      },
+      {
+        "name": "sdd",
+        "title": "敏感数据发现",
+        "publicPath": "/",
+        "script": [
+          "script/icons/sdd.js"
+        ]
+      }
+    ]
+  }
+}
