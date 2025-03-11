@@ -25,8 +25,10 @@ VALUES ('01', '0', '/toolbox/flow', '流程设计', '/toolbox/flow/index', 200, 
 -- VALUES ('02', '0', '/resource', '资产管理', NULL, 2, 1, '100001', 'resource', 'T', 'Star');
 -- INSERT INTO sys_menu ("id", "pid", "path", "title", "component", "sort", "deep", "menu_type_cd", "permissions", "has_children", "icon")
 -- VALUES ('03', '0', '/compliance', '合规管理', NULL, 3, 1, '100001', 'compliance', 'T', 'Star');
+INSERT INTO sys_menu ("id", "pid", "path", "title", "component", "sort", "deep", "menu_type_cd", "permissions", "has_children", "icon")
+VALUES ('04', '0', '/classify', '分类分级', NULL, 4, 1, '100001', 'classify', 'T', 'Star');
 -- INSERT INTO sys_menu ("id", "pid", "path", "title", "component", "sort", "deep", "menu_type_cd", "permissions", "has_children", "icon")
--- VALUES ('99', '0', '/misc', '杂项管理', NULL, 4, 1, '100001', 'compliance', 'T', 'Star');
+-- VALUES ('99', '0', '/misc', '杂项管理', NULL, 99, 1, '100001', 'compliance', 'T', 'Star');
 -- endregion
 
 -- region 系统管理
@@ -294,6 +296,19 @@ INSERT INTO sys_menu ("id", "pid", "path", "title", "component", "sort", "deep",
 VALUES ('12602', '126', NULL, '编辑', NULL, 2, 3, '100003', 'asset.manage.approve.update', 'F', NULL);
 INSERT INTO sys_menu ("id", "pid", "path", "title", "component", "sort", "deep", "menu_type_cd", "permissions", "has_children", "icon")
 VALUES ('12603', '126', NULL, '删除', NULL, 3, 3, '100003', 'asset.manage.approve.delete', 'F', NULL);
+-- endregion
+-- endregion
+
+-- region 分类分级
+-- region 特征管理
+INSERT INTO sys_menu ("id", "pid", "path", "title", "component", "sort", "deep", "menu_type_cd", "permissions", "has_children", "icon")
+VALUES ('127', '04', '/classify-feature', '特征管理', '/classify/feature/index', 927, 2, '100002', 'classify.feature.list', 'T', 'Star');
+INSERT INTO sys_menu ("id", "pid", "path", "title", "component", "sort", "deep", "menu_type_cd", "permissions", "has_children", "icon")
+VALUES ('12701', '127', NULL, '新增', NULL, 1, 3, '100003', 'classify.feature.create', 'F', NULL);
+INSERT INTO sys_menu ("id", "pid", "path", "title", "component", "sort", "deep", "menu_type_cd", "permissions", "has_children", "icon")
+VALUES ('12702', '127', NULL, '编辑', NULL, 2, 3, '100003', 'classify.feature.update', 'F', NULL);
+INSERT INTO sys_menu ("id", "pid", "path", "title", "component", "sort", "deep", "menu_type_cd", "permissions", "has_children", "icon")
+VALUES ('12703', '127', NULL, '删除', NULL, 3, 3, '100003', 'classify.feature.delete', 'F', NULL);
 -- endregion
 -- endregion
 
