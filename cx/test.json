@@ -1,0 +1,28 @@
+{
+  "label": "列名",
+  "value": "fieldName",
+  "children": [
+    {
+      "label": "正则表达式",
+      "value": "regex"
+    },
+    {
+      "label": "包含",
+      "value": "contains",
+      "multiple": false,
+      "children": [
+        "tinyint",
+        "smallint"
+      ]
+    },
+    {
+      "label": "不包含任意一个",
+      "value": "notContainsAny",
+      "multiple": true,
+      "children": [
+        "tinyint",
+        "smallint"
+      ]
+    }
+  ]
+}
