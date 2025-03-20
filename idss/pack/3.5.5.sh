@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 配置信息
-PACKAGES=("dist@3.5.0")
+PACKAGES=("dsmcp-fe@3.5.5" "dsmc-fe@3.5.5" "idm-fe@3.5.5" "sdd-fe@3.5.5")
 #PACKAGES=("dist@3.5.0" "dsmcp-fe@3.5.5" "dsmc-fe@3.5.5" "idm-fe@3.5.5" "sdd-fe@3.5.5")
 REMOTE_HOSTS=("192.168.30.81")
 #REMOTE_HOSTS=("192.168.30.41" "192.168.30.51" "192.168.30.62" "192.168.30.81")
@@ -63,5 +63,5 @@ for i in "${!PACKAGES[@]}"; do
     done
 
     # 移动tar.gz包到桌面
-    mv "$TAR_FILENAME" ~/Desktop/
+    mv "$TAR_FILENAME" ~/Desktop/release/
 done

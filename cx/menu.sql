@@ -224,7 +224,7 @@ VALUES ('11303', '113', NULL, '删除', NULL, 3, 3, '100003', 'external.api.part
 -- region 合规管理
 -- region 合规策略管理
 INSERT INTO sys_menu ("id", "pid", "path", "title", "component", "sort", "deep", "menu_type_cd", "permissions", "has_children", "icon")
-VALUES ('114', '03', '/compliance-strategy', '合规策略管理-todo', '/compliance/strategy/index', 114, 2, '100002', 'compliance.strategy.list', 'T', 'Star');
+VALUES ('114', '03', '/compliance-strategy', '合规策略管理', '/compliance/strategy/index', 114, 2, '100002', 'compliance.strategy.list', 'T', 'Star');
 INSERT INTO sys_menu ("id", "pid", "path", "title", "component", "sort", "deep", "menu_type_cd", "permissions", "has_children", "icon")
 VALUES ('11401', '114', NULL, '新增', NULL, 1, 3, '100003', 'compliance.strategy.create', 'F', NULL);
 INSERT INTO sys_menu ("id", "pid", "path", "title", "component", "sort", "deep", "menu_type_cd", "permissions", "has_children", "icon")
@@ -287,7 +287,7 @@ VALUES ('11903', '119', NULL, '删除', NULL, 3, 3, '100003', 'safe.standard.del
 -- endregion
 -- region 脱敏策略管理
 INSERT INTO sys_menu ("id", "pid", "path", "title", "component", "sort", "deep", "menu_type_cd", "permissions", "has_children", "icon")
-VALUES ('120', '0', '/data-desensitization-strategy', '脱敏策略管理-todo', '/misc/data-desensitization-strategy/index', 120, 2, '100002', 'data.desensitization.strategy.list', 'T', 'Star');
+VALUES ('120', '0', '/data-desensitization-strategy', '脱敏策略管理-todo', '/misc/data-desensitization-strategy/index', 9120, 2, '100002', 'data.desensitization.strategy.list', 'T', 'Star');
 INSERT INTO sys_menu ("id", "pid", "path", "title", "component", "sort", "deep", "menu_type_cd", "permissions", "has_children", "icon")
 VALUES ('12001', '120', NULL, '新增', NULL, 1, 3, '100003', 'data.desensitization.strategy.create', 'F', NULL);
 INSERT INTO sys_menu ("id", "pid", "path", "title", "component", "sort", "deep", "menu_type_cd", "permissions", "has_children", "icon")
@@ -297,11 +297,11 @@ VALUES ('12003', '120', NULL, '删除', NULL, 3, 3, '100003', 'data.desensitizat
 -- endregion
 -- region 脱敏策略结果
 INSERT INTO sys_menu ("id", "pid", "path", "title", "component", "sort", "deep", "menu_type_cd", "permissions", "has_children", "icon")
-VALUES ('121', '0', '/data-desensitization-result', '脱敏策略结果-todo', '/misc/data-desensitization-result/index', 121, 2, '100002', 'data.desensitization.result.list', 'T', 'Star');
+VALUES ('121', '0', '/data-desensitization-result', '脱敏策略结果-todo', '/misc/data-desensitization-result/index', 9121, 2, '100002', 'data.desensitization.result.list', 'T', 'Star');
 -- endregion
 -- region 关键岗位责任人
 INSERT INTO sys_menu ("id", "pid", "path", "title", "component", "sort", "deep", "menu_type_cd", "permissions", "has_children", "icon")
-VALUES ('122', '0', '/key-position-person', '关键岗位责任人-todo', '/misc/key-position-person/index', 122, 2, '100002', 'key.position.person.list', 'T', 'Star');
+VALUES ('122', '0', '/key-position-person', '关键岗位责任人-todo', '/misc/key-position-person/index', 9122, 2, '100002', 'key.position.person.list', 'T', 'Star');
 INSERT INTO sys_menu ("id", "pid", "path", "title", "component", "sort", "deep", "menu_type_cd", "permissions", "has_children", "icon")
 VALUES ('12201', '122', NULL, '新增', NULL, 1, 3, '100003', 'key.position.person.create', 'F', NULL);
 INSERT INTO sys_menu ("id", "pid", "path", "title", "component", "sort", "deep", "menu_type_cd", "permissions", "has_children", "icon")

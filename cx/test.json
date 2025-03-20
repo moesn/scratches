@@ -1,28 +1,11 @@
-{
-  "label": "列名",
-  "value": "fieldName",
-  "children": [
-    {
-      "label": "正则表达式",
-      "value": "regex"
-    },
-    {
-      "label": "包含",
-      "value": "contains",
-      "multiple": false,
-      "children": [
-        "tinyint",
-        "smallint"
-      ]
-    },
-    {
-      "label": "不包含任意一个",
-      "value": "notContainsAny",
-      "multiple": true,
-      "children": [
-        "tinyint",
-        "smallint"
-      ]
-    }
-  ]
-}
+background-color: rgb(86, 1, 8);
+background-color: rgb(98, 1, 11);
+background-color: rgb(115, 1, 14);
+background-color: rgb(128, 2, 17);
+background-color: rgb(150, 2, 22);
+background-color: rgb(179, 5, 28);
+background-color: rgb(213, 38, 47);
+background-color: rgb(237, 61, 64);
+background-color: rgb(252, 94, 90);
+background-color: rgb(255, 131, 127);
+background-color: rgb(241, 241, 242);

@@ -1,9 +1,27 @@
-cp sample.json5 platform-warn-info.json5
-cp sample.json5 data-leakage-warn.json5
-cp sample.json5 api-safe-warn-info.json5
-cp sample.json5 api-safe-monitor-log.json5
-cp sample.json5 database-audit-log.json5
-cp sample.json5 database-audit-warn.json5
-cp sample.json5 four-a-audit-log.json5
-cp sample.json5 data-leakage-log.json5
-cp sample.json5 data-leakage-warn.json5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    online
+    offline
+    get
+    post
+    put
+    patch
+delete
+head
+connect
+options
+root
+admin
+custom
