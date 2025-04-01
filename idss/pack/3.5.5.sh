@@ -1,9 +1,12 @@
 #!/bin/bash
 
 # 配置信息
-PACKAGES=("dsmcp-fe@3.5.5" "dsmc-fe@3.5.5" "idm-fe@3.5.5" "sdd-fe@3.5.5")
+#PACKAGES=("dsmcp-fe@3.5.5" "sdd-fe@3.5.5")
+PACKAGES=("sdd-fe@3.5.5")
+#PACKAGES=("dsmcp-fe@3.5.5" "dsmc-fe@3.5.5" "idm-fe@3.5.5" "sdd-fe@3.5.5")
 #PACKAGES=("dist@3.5.0" "dsmcp-fe@3.5.5" "dsmc-fe@3.5.5" "idm-fe@3.5.5" "sdd-fe@3.5.5")
 REMOTE_HOSTS=("192.168.30.81")
+#REMOTE_HOSTS=("192.168.30.81")
 #REMOTE_HOSTS=("192.168.30.41" "192.168.30.51" "192.168.30.62" "192.168.30.81")
 REMOTE_USER="idss"
 REMOTE_BASE_DIR="/home/idss/dsf-1.3.0/dsmc-fe"
@@ -29,6 +32,11 @@ for i in "${!PACKAGES[@]}"; do
         echo "项目目录不存在: $LOCAL_PKG_DIR"
         continue
     fi
+
+    # Node多版本环境，使用系统版本
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    nvm use system
 
     # 执行pnpm构建
     if [ "$PKG_NAME" == "dist" ]; then
