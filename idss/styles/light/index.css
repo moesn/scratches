@@ -112,6 +112,7 @@ textarea:-ms-input-placeholder {
 }
 .el-drawer label {
   color: rgba(34, 43, 69, 0.6) !important;
+  padding: 0 !important;
   font-size: 13px !important;
 }
 .el-drawer label::before {
