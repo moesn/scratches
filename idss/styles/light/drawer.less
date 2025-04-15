@@ -1,0 +1,76 @@
+.el-drawer {
+  border-radius: 6px 0 0 6px;
+  background-color: @layout-body-background !important;
+
+  label {
+    color: @text-color-secondary !important;
+    font-size: 13px !important;
+
+    &::before {
+      display: none !important;
+    }
+  }
+
+  &__header {
+    background-color: @layout-header-background;
+    box-shadow: 0 .5rem 1rem #2c33491a;
+    padding: 14px !important;
+    color: @text-color !important;
+    margin-bottom: 0 !important;
+
+    span {
+      font-weight: 600;
+      font-size: 15px !important;
+    }
+  }
+
+  .el-input {
+    input {
+      border-color: @layout-body-background !important;
+      font-size: 14px !important;
+    }
+
+    &__inner {
+      height: 32px !important;
+    }
+  }
+
+  .el-textarea {
+    textarea {
+      border-color: @layout-body-background !important;
+      font-size: 14px !important;
+    }
+  }
+
+  &__close-btn {
+    display: none;
+  }
+
+  .bo-drawer-body {
+    height: 100% !important;
+  }
+
+  .bo-drawer-footer {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+
+    .el-button {
+      width: unset !important;
+      line-height: 0;
+    }
+  }
+
+  .el-form {
+    padding: 0 !important;
+
+    &-item {
+      line-height: 32px;
+      margin-bottom: 10px !important;
+
+      &__error {
+        padding-top: 0 !important;
+      }
+    }
+  }
+}

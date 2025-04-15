@@ -1,0 +1,58 @@
+.el-input input, .el-textarea textarea {
+  background-color: @input-bg !important;
+  border-color: @input-border !important;
+  border-radius: 4px !important;
+  color: @text-color !important;
+  font-weight: 600 !important;
+
+  &:hover {
+    background-color: @input-hover-bg !important;
+  }
+}
+
+.el-tree-node__content {
+  color: @text-color;
+}
+
+.el-select {
+  &-dropdown__item {
+    color: @text-color !important;
+    font-size: 12px !important;
+  }
+
+  &__tags-text {
+    color: @text-color-secondary;
+  }
+
+}
+
+.el-radio {
+  &__label {
+    color: @text-color !important;
+  }
+
+  &__inner {
+    background-color: @select-background !important;
+  }
+}
+
+.el-radio__input.is-checked .el-radio__inner {
+  border-color: @blue-base !important;
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner {
+  background-color: @blue-base !important;
+  border-color: @blue-base !important;
+}
+
+.el-date-editor.el-input {
+  font-size: 12px;
+}
+
+.el-form-item__label:before {
+  display: none !important;
+}
+
+.el-input__inner:focus {
+  box-shadow: 0 0 2px 0 @blue-base;
+}

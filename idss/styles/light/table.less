@@ -1,0 +1,66 @@
+.el-table {
+  border-color: @border-color-split !important;
+  border-right: none !important;
+  border-bottom: none !important;
+
+  .cell {
+    color: @text-color !important;
+    font-size: 13px !important;
+
+    div, button {
+      font-size: 13px !important;
+    }
+  }
+
+  th, td {
+    background-color: @basic1 !important;
+    border-color: @border-color-split !important;
+    padding: 8px 0 !important;
+    line-height: 23px !important;
+  }
+
+  tr {
+    &:hover td {
+      background-color: @basic3 !important;
+    }
+
+    &:nth-child(2n+1) {
+      td {
+        background-color: @basic2 !important;
+      }
+
+      &:hover td {
+        background-color: @basic3 !important;
+      }
+    }
+  }
+}
+
+.el-pagination {
+  span {
+    color: @text-color !important;
+    font-weight: 600;
+
+    label {
+      color: @blue-base !important;
+      font-size: 14px !important;
+    }
+  }
+
+  .el-input__inner {
+    font-size: 12px !important;
+  }
+
+  &.is-background .el-pager li:not(.disabled).active {
+    background-color: @blue-base !important;
+    border-color: @blue-base !important;
+  }
+}
+
+.b-search-pro-opt-mini {
+  .el-button {
+    &:last-child {
+      padding: 0 8px;
+    }
+  }
+}

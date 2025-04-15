@@ -1,0 +1,157 @@
+git --no-optional-locks -c color.branch=false -c color.diff=false -c color.status=false -c diff.mnemonicprefix=false -c core.quotepath=false -c credential.helper=sourcetree commit -q -F /var/folders/rb/jskpmt8n7k750h8sp8wb70980000gp/T/SourceTreeTemp.D9W43b -a
+> running pre-commit hook: lint-staged
+Stashing changes... [started]
+Stashing changes... [skipped]
+→ No partially staged files found...
+Running linters... [started]
+Running tasks for *.{js,vue} [started]
+vue-cli-service lint [started]
+vue-cli-service lint [failed]
+→
+Running tasks for *.{js,vue} [failed]
+→
+Running linters... [failed]
+
+
+
+✖ vue-cli-service lint found some errors. Please fix them and try committing again.
+
+/Volumes/Code/IDSS/base-web/src/assets/icons-slide-menu/iconfont.js
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/assets/icons/iconfont.js
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/Breadcrumb/index.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/common-table/demo.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/common-table/index.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/common-table/tableComponent/BaseRender.js
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/common-table/tableComponent/index.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/common-table/tableComponent/table-column.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/commons/idss-select-tree.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/crontab-select/index.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/expose.js
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/fileUpload/index.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/filter-bar/NumberSelect.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/filter-bar/TimeSelect.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/filter-bar/add-filter.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/filter-bar/index.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/filter-bar/save-dialog.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/filter-bar/saved-filters.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/index.js
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/modelRunConfig/index.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/script-edit/index.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/transcoding/app-transcoding-dialog.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/upload/index.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/components/wrapUpload/index.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/router/index.js
+440:9  error  'MessageBox' is not defined  no-undef
+
+/Volumes/Code/IDSS/base-web/src/views/explore/exploreTime.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/views/home/portal.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/views/iframe/index.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/views/insight/widgets/TimeController.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/views/layout/layout.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/views/layout/vertical/about-dialog.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/views/layout/vertical/app-header.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/views/layout/vertical/app-menu-template.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/views/layout/vertical/app-notice.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/views/layout/vertical/app-select.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/views/layout/vertical/help-link.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/views/layout/vertical/index.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/views/layout/vertical/search-menu.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/views/layout/watermark.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/views/license/index.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/views/warning/platform/components/basic-form.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/views/warning/platform/components/rule-config.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/views/warning/platform/components/rule-form.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/views/warning/platform/create.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+/Volumes/Code/IDSS/base-web/src/views/warning/platform/index.vue
+0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
+
+✖ 45 problems (1 error, 44 warnings)
+
+pre-commit hook failed (add --no-verify to bypass)
+Completed with errors, see above

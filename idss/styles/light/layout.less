@@ -1,0 +1,308 @@
+.el-aside {
+  overflow: unset !important;
+  color: @text-color !important;
+  width: 250px !important;
+
+  + .is-vertical {
+    width: calc(100vw - 250px) !important;
+  }
+}
+
+.horizontal-header-container {
+  color: @text-color !important;
+  position: absolute;
+  height: 50px !important;
+  z-index: 10;
+  width: unset !important;
+  right: 0;
+
+  .el-dropdown {
+    line-height: 32px;
+
+    &:hover {
+      background-color: @select-background !important;
+    }
+  }
+
+  .el-menu.el-menu--popup {
+    overflow: unset !important;
+  }
+}
+
+.app-breadcrumb.el-breadcrumb.horizontal {
+  color: @text-color !important;
+  margin: 0 !important;
+  height: 50px !important;
+  background-color: #fff !important;
+  box-shadow: 0 .5rem 1rem #2c33491a;
+
+  .el-breadcrumb__item {
+    font-size: 13px !important;
+  }
+}
+
+.menu-horizontal-container {
+  background-color: #fff !important;
+
+  .el-icon-arrow-down:before {
+    content: "\e6e0" !important;
+  }
+
+  header {
+    height: 50px !important;
+    box-shadow: 0 .5rem 1rem #2c33491a;
+    color: @text-color;
+    justify-content: left !important;
+
+    .logo {
+      height: 50px;
+      width: unset !important;
+    }
+  }
+
+  .el-scrollbar {
+    overflow: unset !important;
+
+    &__wrap {
+      margin-top: 2px;
+      height: 100%;
+
+      .el-menu--horizontal.el-menu {
+        position: absolute;
+        width: 100%;
+      }
+
+      .el-menu--horizontal .el-menu {
+        .el-menu-item, .el-submenu__title {
+          padding: 0 20px !important;
+        }
+      }
+
+      .el-scrollbar {
+        &__view {
+          height: 100%;
+
+          .el-menu--horizontal {
+            height: 100%;
+
+            > div {
+              height: 100%;
+              overflow-y: auto;
+            }
+          }
+        }
+      }
+
+      .el-submenu__icon-arrow {
+        top: 14px;
+        right: 10px;
+        font-size: 12px !important;
+      }
+
+      .el-submenu__title {
+        height: 40px !important;
+
+        i {
+          font-size: 20px;
+          margin: 0 5px 0 -10px;
+        }
+
+        &:hover {
+          background-color: @menu-item-active-bg !important;
+        }
+      }
+
+      .el-submenu:not(.is-opened), .el-menu-item {
+        height: 40px !important;
+        font-weight: 500;
+        color: @text-color !important;
+
+        i {
+          font-size: 20px;
+          margin: 0 5px 0 -10px;
+        }
+
+        &.is-active, &:hover {
+          background-color: @menu-item-active-bg !important;
+
+          &::after {
+            height: 40px !important;
+            top: 0 !important;
+            background-color: @cyan-base !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.app-main-container {
+  background-color: #edf1f7 !important;
+  height: calc(100vh - 90px) !important;
+}
+
+.app-menu-container {
+  .el-submenu {
+    .el-menu--horizontal {
+      background-color: @basic1 !important;
+
+      .el-menu-item:hover {
+        background-color: @select-background !important;
+      }
+    }
+
+    &:not([is-root]).is-active > .el-submenu__title {
+      background-color: @select-background !important;
+    }
+  }
+
+
+  .is-opened > .el-submenu__title {
+    background-color: @select-background !important;
+  }
+
+  .el-submenu__title {
+    text-shadow: none !important;
+    padding: 0 10px !important;
+
+    :hover {
+      color: @text-color !important;
+    }
+  }
+
+  .el-menu-item {
+    &:not([is-root]) :hover, &:not([is-root]).is-active, &:hover {
+      color: @text-color !important;
+      text-shadow: none !important;
+      background-color: @menu-item-active-bg !important;
+    }
+  }
+}
+
+.app-select {
+  width: 100% !important;
+  margin: 4px 0 0 0 !important;
+  padding: 0 8px;
+
+  .el-input__inner {
+    color: @text-color-secondary !important;
+  }
+
+  .el-select-dropdown {
+    width: 234px;
+    min-width: 234px !important;
+    border-color: @border-color-base;
+
+    &__item {
+      color: @text-color !important;
+
+      &.selected, &:hover {
+        background-color: @select-background !important;
+      }
+    }
+  }
+}
+
+.search-menu {
+  padding-right: 30px;
+  line-height: 34px;
+
+  .el-input__inner {
+    background: @select-background !important;
+  }
+
+  .el-select-dropdown {
+    width: 280px !important;
+    left: -30px !important;
+    border-color: @border-color-base;
+  }
+}
+
+.el-dropdown-menu.user-account-dropdown-menu.el-popper {
+  background-color: @basic1 !important;
+
+  .el-dropdown-menu__item {
+    color: @text-color !important;
+
+    &:not(.is-disabled):hover {
+      background-color: @select-background !important;
+      color: @text-color !important;
+    }
+
+    &.selected {
+      background-color: @select-background !important;
+    }
+
+    a {
+      color: @text-color !important;
+    }
+  }
+}
+
+.custom-tree-node {
+  color: @text-color !important;
+  font-size: 12px !important;
+
+  .has-children {
+    font-size: 14px !important;
+  }
+
+  .idss-svg-icon {
+    display: none;
+  }
+
+  &:hover {
+    background-color: @select-background !important;
+  }
+
+  .el-button {
+    display: none;
+  }
+}
+
+.el-menu.el-menu--popup {
+  background-color: transparent !important;
+  margin-top: 0 !important;
+  max-height: calc(100vh - 90px);
+  overflow-y: auto;
+
+  .el-submenu, .el-menu-item {
+    background-color: rgba(255, 255, 255, .9) !important;
+
+    div {
+      background-color: transparent !important;
+    }
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+.el-menu--horizontal .el-menu {
+  .el-menu-item {
+    &.is-active, &:hover {
+      border-right: 2px solid @cyan-base !important;
+      background-color: @menu-item-active-bg !important;
+    }
+  }
+}
+
+.el-submenu.is-active {
+  border-right: 2px solid @cyan-base !important;
+}
+
+.idss-svg-icon.icon {
+  fill: @text-color !important;
+}
+
+aside.message {
+  color: @text-color !important;
+}
+
+.el-container {
+  .breadcrumb-container {
+    margin: 0 !important;
+  }
+}
