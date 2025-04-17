@@ -3,8 +3,8 @@
 # 配置信息
 #PACKAGES=("dsmcp-fe@3.5.5" "sdd-fe@3.5.5")
 #PACKAGES=("dist@3.5.0" "dsmcp-fe@3.5.5")
-#PACKAGES=("sdd-fe@3.5.5")
-PACKAGES=("dsmcp-fe@3.5.5")
+PACKAGES=("sdd-fe@3.5.5")
+#PACKAGES=("dsmcp-fe@3.5.5")
 #PACKAGES=("dsmcp-fe@3.5.5" "dsmc-fe@3.5.5" "idm-fe@3.5.5" "sdd-fe@3.5.5")
 #PACKAGES=("dist@3.5.0" "dsmcp-fe@3.5.5" "dsmc-fe@3.5.5" "idm-fe@3.5.5" "sdd-fe@3.5.5")
 REMOTE_HOSTS=("192.168.30.81")
