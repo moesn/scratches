@@ -481,3 +481,13 @@ GROUP BY
     menu_code
 HAVING
     COUNT(*) > 1
+
+-- 查询系统内置菜单
+SELECT
+    *
+FROM
+    ums_sys_menus
+WHERE
+    menu_code IN (SELECT function_id FROM ums_sys_role_function WHERE role_id = 1)
+ORDER BY
+    menu_code

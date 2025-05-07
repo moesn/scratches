@@ -1,25 +1,64 @@
-业务系统管理  》   dsmc-business-manage
-管控策略    》   dsmc-controls-strategy
-应用资产-页面级    》   dsmc-data-asset-app
-数据库资产-页面级   》   dsmc-data-asset-database
-文件资产-页面级    》   dsmc-data-asset-file
-接口资产-页面级    》   dsmc-data-asset-interface
-数据资产备案  》   dsmc-data-asset-record
-脱敏策略结果  》   dsmc-desensitization-strategy-details
-脱敏策略管理  》   dsmc-desensitization-strategy-manage
-数据监控态势  》   dsmc-data-monitor-situation
-数据资产清单-数据治理 》   dsmc-data-asset-inventory
-数据安全治理  》   dsmc-data-safety-govern
-用户个人信息清单-数据治理   》   dsmc-user-info-inventory
-生命周期标识任务详情  》   dsmc-life-cycle-task-details
-生命周期标识任务    》   dsmc-life-cycle-task
-运营工作台   》   dsmc-operation-worktable
-敏感发现风险策略    》   dsmc-risk-strategy
-合规结果    》   dsmc-compliance-result
-合规策略    》   dsmc-compliance-strategy
-合规任务    》   dsmc-compliance-task
-合规模版    》   dsmc-compliance-template
-安全管控标准  》   dsmc-safety-controls-standard
-第三方能力站点 》   dsmc-three-capacity
-未知资产认领  》   dsmc-unknown-data-claim
-用户数据权限  》   dsmc-user-data-auth
+负责产品线Web前端开发人员的KPI设计
+
+以下KPI设计综合技术能力、项目交付、协作效率及业务价值，适用于独立负责全产品线前端工作的开发人员：
+
+一、技术能力与代码质量‌
+
+代码规范性‌，代码符合团队规范（如ESLint规则），Code Review评分≥4.5分（满分5分）；代码复用率≥30%（通过组件库、工具函数复用统计）。
+
+性能优化‌
+
+页面首屏加载时间≤1.5秒（核心页面达标率100%）；
+Lighthouse性能评分≥90分（关键页面全覆盖）。
+
+技术迭代能力‌
+
+每季度完成至少1项技术升级（如框架版本迁移、构建工具优化）并落地验证。
+二、项目交付与质量保障‌
+
+任务完成效率‌
+
+迭代需求按时交付率≥95%（基于Jira等项目管理工具统计）；
+紧急需求响应时效≤4小时（从需求确认到PR提交）。
+
+缺陷控制‌
+
+生产环境缺陷密度≤0.5个/千行代码（严重Bug占比＜20%）；
+缺陷修复平均时效≤2小时（非阻塞性问题）。
+
+测试覆盖‌
+
+单元测试覆盖率≥80%（核心组件强制要求）；
+E2E测试用例通过率100%（主流程全覆盖）。
+三、用户体验与产品价值‌
+
+体验指标‌
+
+用户操作成功率≥98%（通过埋点统计关键链路转化率）；
+跨端兼容性达标率100%（主流浏览器及移动端适配）。
+
+业务支撑‌
+
+需求反讲准确率100%（确保需求理解与产品目标一致）；
+每季度输出≥1份性能优化报告，推动业务指标提升（如降低跳出率）。
+四、协作与知识沉淀‌
+
+跨团队协作‌
+
+接口联调一次性通过率≥90%（减少前后端沟通成本）；
+需求变更影响评估及时性≤1工作日。
+
+知识共享‌
+
+每月输出≥1篇技术文档（如组件使用规范、性能优化方案）；
+年度内主导≥2次团队内部分享（主题需通过技术评审）。
+考核周期与数据来源‌
+考核维度	数据来源	周期
+代码质量	SonarQube报告、Code Review记录	月度
+性能指标	Lighthouse、埋点系统	季度
+项目交付	Jira任务状态、缺陷管理系统	迭代周期
+用户体验	用户反馈工单、A/B测试报告	半年度
+说明‌
+KPI权重建议：技术能力（40%）、项目交付（30%）、用户体验（20%）、协作能力（10%）；
+目标值需根据产品线复杂度动态调整，例如新业务线可降低代码复用率要求；
+需配套建立透明反馈机制，每月同步进度并记录调整依据。

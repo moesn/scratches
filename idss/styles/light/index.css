@@ -141,7 +141,10 @@ textarea:-ms-input-placeholder {
   font-size: 14px !important;
 }
 .el-drawer__close-btn {
-  display: none;
+  z-index: 10;
+  position: absolute;
+  top: 50px;
+  right: 0;
 }
 .el-drawer .bo-drawer-body {
   height: 100% !important;
@@ -433,6 +436,10 @@ textarea:-ms-input-placeholder {
 .el-menu.el-menu--popup .el-submenu,
 .el-menu.el-menu--popup .el-menu-item {
   background-color: rgba(255, 255, 255, 0.9) !important;
+}
+.el-menu.el-menu--popup .el-submenu .el-icon-folder,
+.el-menu.el-menu--popup .el-menu-item .el-icon-folder {
+  display: none;
 }
 .el-menu.el-menu--popup .el-submenu div,
 .el-menu.el-menu--popup .el-menu-item div {
