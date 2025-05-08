@@ -1,3 +1,4 @@
+SELECT * FROM ums_sys_menus WHERE menu_type = 'system';
 DELETE FROM ums_sys_menus WHERE menu_type = 'system';
 INSERT INTO ums_sys_menus (menu_type, menu_property, menu_level, menu_name, menu_code, menu_path, manage_free, hidden, parent_name, status, menu_order, default_order, default_name, default_status, default_parent, create_user, create_date, update_user, update_date, application, level1, menu_category, new_open_window) VALUES ('system', '0', 1, '授权管理', 'license-manage', NULL, '0', '0', 'base', '1', 4, 1, '授权管理', '1', NULL, NULL, NULL, NULL, NULL, 'dsm_web', '1', '0', 0);
 INSERT INTO ums_sys_menus (menu_type, menu_property, menu_level, menu_name, menu_code, menu_path, manage_free, hidden, parent_name, status, menu_order, default_order, default_name, default_status, default_parent, create_user, create_date, update_user, update_date, application, level1, menu_category, new_open_window) VALUES ('system', '0', 1, '用户管理', 'sys-user', NULL, '0', '0', 'base', '1', 2, 1, '用户管理', '1', NULL, NULL, NULL, NULL, NULL, 'dsm_web', '1', '0', 0);
@@ -44,23 +45,28 @@ INSERT INTO ums_sys_menus (menu_type, menu_property, menu_level, menu_name, menu
 INSERT INTO ums_sys_menus (menu_type, menu_property, menu_level, menu_name, menu_code, menu_path, manage_free, hidden, parent_name, status, menu_order, default_order, default_name, default_status, default_parent, create_user, create_date, update_user, update_date, application, level1, menu_category, new_open_window) VALUES ('system', '0', 1, '保存', 'sys-mail-config#sysmail-config-save', NULL, '0', '0', 'sys-mail-config', '1', 0, 1, '保存', '1', NULL, NULL, NULL, NULL, NULL, 'dsm_web', '1', '1', 0);
 INSERT INTO ums_sys_menus (menu_type, menu_property, menu_level, menu_name, menu_code, menu_path, manage_free, hidden, parent_name, status, menu_order, default_order, default_name, default_status, default_parent, create_user, create_date, update_user, update_date, application, level1, menu_category, new_open_window) VALUES ('system', '0', 1, '新增', 'sys-global-dict#globaldict-add', NULL, '0', '0', 'sys-global-dict', '1', 0, 1, '新增', '1', NULL, NULL, NULL, NULL, NULL, 'dsm_web', '1', '1', 0);
 
+SELECT * FROM ums_sys_role WHERE id <= 1;
 DELETE FROM ums_sys_role WHERE id <= 1;
 INSERT INTO ums_sys_role (role_id, role_name, role_describe, builtin, del_flag, create_user, create_date, update_user, update_date, is_admin, role_resource_search_limit, user_resource_search_limit, type, role_type, tenant_id, id, visible) VALUES ('0', '开发者模式', '', 1, 0, '', '', '', '', '1', '', '', '', 'system', 0, 0, '');
 INSERT INTO ums_sys_role (role_id, role_name, role_describe, builtin, del_flag, create_user, create_date, update_user, update_date, is_admin, role_resource_search_limit, user_resource_search_limit, type, role_type, tenant_id, id, visible) VALUES ('1', '系统管理员', '原superadmin和superbuz功能合并', 1, 0, '', '', '', 1745996731613, '1', 0, 0, '', 'system', 1, 1, '');
 
+SELECT * FROM ums_sys_user WHERE user_id <= 1;
 DELETE FROM ums_sys_user WHERE user_id <= 1;
 INSERT INTO ums_sys_user (user_id, dept_id, department_id, user_name, password, password_old, period_from, period_to, status, real_name, code, sex, telephone, email, lant_id, leader, login_voucher, fail_count, lock_date, final_login_ip, final_login_date, builtin, security_code, remark, del_flag, tenant_id, queue, create_user, create_date, update_user, update_date, social_account, first_login_fail_time, is_first_login, is_need_update_password, default_router_id, default_router_name, mobile, dept_name, last_update_password_time, default_dashboard, data_limit_extend_role_id, fa_extend_info, sub_account_id, edit_delete, editor_note, ext_info, dsmc_dept_id) VALUES (0, '', '', 'root', '7e1bb79f92fdaabe0e526dc2cf5ce120', '', 1745942400000, 4102502399000, 0, '', '', '', '', '', '', '', '', 0, '', '192.168.30.123', 1746516516130, 1, '', '开发者模式', 0, '', '', '', '', 'System', 1746516516130, '', '', '', '', 'dsmc-business-manage', '业务系统管理', '', '', '2025-04-30 11:55:49', '', '0', '', '', 0, '', '', '');
 INSERT INTO ums_sys_user (user_id, dept_id, department_id, user_name, password, password_old, period_from, period_to, status, real_name, code, sex, telephone, email, lant_id, leader, login_voucher, fail_count, lock_date, final_login_ip, final_login_date, builtin, security_code, remark, del_flag, tenant_id, queue, create_user, create_date, update_user, update_date, social_account, first_login_fail_time, is_first_login, is_need_update_password, default_router_id, default_router_name, mobile, dept_name, last_update_password_time, default_dashboard, data_limit_extend_role_id, fa_extend_info, sub_account_id, edit_delete, editor_note, ext_info, dsmc_dept_id) VALUES (1, '', '', 'super', '9d8df8acf1ee2d6f379470fc125cd539', '', 1745942400000, 4102502399000, 0, '', '', '', '', '', '', '', '', 0, '', '192.168.30.66', 1746514953179, 1, '', '系统管理员', 0, '', '', '', '', 'System', 1746514953179, '', '', '', '', 'sys-tenant', '租户管理', '', '', '2025-04-30 14:11:49', '', '', '', '', 0, '', '', '');
 
+SELECT * FROM ums_sys_user_role WHERE user_id <= 1;
 DELETE FROM ums_sys_user_role WHERE user_id <= 1;
 INSERT INTO ums_sys_user_role (user_role_id, user_id, role_id, create_user, create_date, update_user, update_date) VALUES (0, 0, '0', NULL, NULL, NULL, NULL);
 INSERT INTO ums_sys_user_role (user_role_id, user_id, role_id, create_user, create_date, update_user, update_date) VALUES (1, 1, '1', NULL, NULL, NULL, NULL);
 
+SELECT * FROM ums_sys_role_function WHERE role_id = 0;
 DELETE FROM ums_sys_role_function WHERE role_id = 0;
 INSERT INTO ums_sys_role_function (role_id, function_id, value)
 SELECT 0, menu_code, 15
 FROM ums_sys_menus;
 
+SELECT * FROM ums_sys_role_function WHERE role_id = 1;
 DELETE FROM ums_sys_role_function WHERE role_id = 1;
 INSERT INTO ums_sys_role_function (role_id, function_id, value)
 SELECT 1, menu_code, 15
