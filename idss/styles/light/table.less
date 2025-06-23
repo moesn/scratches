@@ -1,4 +1,4 @@
-.el-table {
+.@{dsm-prefix-cls} {.el-table {
   border-color: @border-color-split !important;
   border-right: none !important;
   border-bottom: none !important;
@@ -63,4 +63,9 @@
       padding: 0 8px;
     }
   }
+}
+
+tr.hover-row td.el-table__cell .cell span {
+  color: @blue-base !important;
+}
 }

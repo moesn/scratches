@@ -4,13 +4,16 @@
 #PACKAGES=("dsmcp-fe@3.5.5" "sdd-fe@3.5.5")
 #PACKAGES=("dist@3.5.0")
 PACKAGES=("dsmcp-fe@3.5.5")
+#PACKAGES=("dsmc-fe@3.5.5" "idm-fe@3.5.5")
+#PACKAGES=("dsmc-fe@3.5.5")
 #PACKAGES=("idm-fe@3.5.5")
+#PACKAGES=("sdd-fe@3.5.5")
 #PACKAGES=("dist@3.5.0" "dsmcp-fe@3.5.5")
 #PACKAGES=("dsmcp-fe@3.5.5" "dsmc-fe@3.5.5" "idm-fe@3.5.5" "sdd-fe@3.5.5")
 #PACKAGES=("dist@3.5.0" "dsmcp-fe@3.5.5" "dsmc-fe@3.5.5" "idm-fe@3.5.5" "sdd-fe@3.5.5")
 #REMOTE_HOSTS=("192.168.30.51")
 #REMOTE_HOSTS=("192.168.30.81")
-REMOTE_HOSTS=("192.168.30.41" "192.168.30.51" "192.168.30.62" "192.168.30.81")
+REMOTE_HOSTS=("192.168.30.41" "192.168.30.51" "192.168.30.36")
 REMOTE_USER="idss"
 REMOTE_BASE_DIR="/home/idss/dsf-1.3.0/dsmc-fe"
 LOCAL_BASE_DIR="/Volumes/Code/IDSS"
@@ -30,7 +33,7 @@ for i in "${!PACKAGES[@]}"; do
     if [ -d "$LOCAL_PKG_DIR" ]; then
         # shellcheck disable=SC2164
         cd "$LOCAL_PKG_DIR"
-        git checkout --force "dev/$VERSION"
+        # git checkout --force "dev/$VERSION"
     else
         echo "项目目录不存在: $LOCAL_PKG_DIR"
         continue

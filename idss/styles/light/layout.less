@@ -1,4 +1,4 @@
-.el-aside {
+.@{dsm-prefix-cls} {.el-aside {
   overflow: unset !important;
   color: @text-color !important;
   width: 250px !important;
@@ -215,6 +215,16 @@
     width: 280px !important;
     left: -30px !important;
     border-color: @border-color-base;
+    top: 30px !important;
+    height: calc(100vh - 55px);
+
+    .el-scrollbar {
+      overflow: auto;
+
+      .el-scrollbar__wrap {
+        display: contents;
+      }
+    }
   }
 }
 
@@ -301,12 +311,16 @@ input:-webkit-autofill {
   fill: @text-color !important;
 }
 
-aside.message {
+aside.idss-layout--marginR.message {
   color: @text-color !important;
+  padding: 0px 15px 0 24px;
+  line-height: 30px;
+  cursor: pointer;
 }
 
 .el-container {
   .breadcrumb-container {
     margin: 0 !important;
   }
+}
 }

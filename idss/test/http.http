@@ -1,0 +1,19 @@
+curl 'https://192.168.30.36:8888/api/sys/element/save' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'Accept-Language: zh-CN,zh;q=0.9' \
+  -H 'Authorization: Bearer b9e439312a65444089ea88aa0bafa55d' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/json' \
+  -H 'Origin: https://192.168.30.36:8888' \
+  -H 'Pragma: no-cache' \
+-H 'Referer: https://192.168.30.36:8888/sys-menu?_r=1749545920603' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  --data-raw '{"parentId":8103110,"type":2,"name":"test1","title":"测试","icon":"","hidden":0,"location":0,"description":"","openType":0,"link":1,"pathId":1,"path":"test"}' \
+  --insecure

@@ -1,64 +1,99 @@
-资产分组    》   sdd-asset-group
-审计信息    》   sdd-audit-set
-自动推送配置  》   sdd-auto-push-config
-分类分级清单  》   sdd-class-grade-list
-分类分级核查  》   sdd-class-grade-task-check
-分类分级任务  》   sdd-class-grade-task
-分类分级标准  》   sdd-class-grade-template
-添加合规检查项目    》   sdd-compliance-project-add
-编辑合规检查项目    》   sdd-compliance-project-edit
-合规检查项目  》   sdd-compliance-project
-添加合规检查任务    》   sdd-compliance-task-add
-编辑合规检查任务    》   sdd-compliance-task-edit
-合规检查详情  》   sdd-compliance-detail
-过程信息    》   sdd-compliance-process
-合规检查任务  》   sdd-compliance-task
-核心数据清单(新)   》   sdd-core-data-list-new
-新增数据发现任务    》   sdd-data-find-add
-数据发现历史记录对比  》   sdd-data-find-compare
-数据发现任务查看    》   sdd-data-find-details
-编辑数据发现任务    》   sdd-data-find-edit
-发现任务管理  》   sdd-data-find-task
-数据资源详情  》   sdd-database-detail
-数据资源文件详情    》   sdd-databse-file-detail
-数据库资源   》   sdd-database
-文件资源详情  》   sdd-file-detail
-文件资源    》   sdd-file
-资源清单    》   sdd-data-assets-inventory
-对比分析    》   sdd-data-assets-scan-detail-analysis
-扫描详情    》   sdd-data-assets-scan-detail
-资源扫描    》   sdd-data-assets-scan
-发现数据字典  》   sdd-data-dict
-发现模板管理  》   sdd-find-template
-核心数据清单  》   sdd-core-data-list
-数据目录    》   sdd-data-list-catalogue
-文件目录    》   sdd-data-list-papers
-重要数据清单  》   sdd-important-data-list
-个人用户数据清单    》   sdd-personal-data-list
-数据责任人管理 》   sdd-data-manager
-多维指标引擎  》   sdd-data-model
-重要数据清单(新)   》   sdd-import-data-list-new
-性能监测    》   sdd-monitor
-分类分级清单(新)   》   sdd-class-grade-list-new
-分类分级核查(新)   》   sdd-class-grade-task-check-new
-分类分级任务(新)   》   sdd-class-grade-task-new
-分类分级标准(新)   》   sdd-class-grade-template-new
-分类分级报告  》   sdd-classification-report
-合规风险检查报告    》   sdd-compliance-report
-敏感数据发现报告    》   sdd-data-find-report
-报告查看    》   sdd-report-details
-扫描器管理   》   sdd-scan-manage
-敏感识别规则  》   sdd-sensitive-rules
-业务优先模式  》   sdd-business-priority
-智能反馈引擎  》   sdd-feedback-engine
-系统配置    》   sdd-sys-set
-智能向量引擎  》   sdd-vector-engine
-系统分组    》   sdd-sys-group
-临时分类分级核查    》   sdd-class-grade-task-check-temp
-临时分类分级任务    》   sdd-class-grade-task-temp
-用户管理    》   sdd-user-set
-版本插件    》   sdd-version-plugin
-首页-分类分级核查   》   sdd-workbench-check
-首页  》   sdd-workbench
-核查工单管理  》   sdd-work-order-verify
-关键岗位责任人管理   》   sdd-key-position-person
+db.getCollection("gpsinfo_2025-06-18").insert( {
+    _id: ObjectId("1"),
+    bus_no: "贵AU4911",
+    location: [
+        106.603,
+        26.396
+    ],
+    record_time: "2025-06-18 07:20:25"
+} );
+
+db.getCollection("gpsinfo_2025-06-18").insert( {
+    _id: ObjectId("2"),
+    bus_no: "贵AU4911",
+    location: [
+        106.613,
+        26.406
+    ],
+    record_time: "2025-06-18 07:20:25"
+} );
+
+db.getCollection("gpsinfo_2025-06-18").insert( {
+    _id: ObjectId("3"),
+    bus_no: "贵AU4911",
+    location: [
+        106.623,
+        26.416
+    ],
+    record_time: "2025-06-18 07:20:25"
+} );
+
+db.getCollection("gpsinfo_2025-06-18").insert( {
+    _id: ObjectId("4"),
+    bus_no: "贵AU4911",
+    location: [
+        106.633,
+        26.396
+    ],
+    record_time: "2025-06-18 07:20:25"
+} );
+
+db.getCollection("gpsinfo_2025-06-18").insert( {
+    _id: ObjectId("5"),
+    bus_no: "贵AU4911",
+    location: [
+        106.623,
+        26.386
+    ],
+    record_time: "2025-06-18 07:20:25"
+} );
+
+db.getCollection("gpsinfo_2025-06-18").insert( {
+    _id: ObjectId("6"),
+    bus_no: "贵AU4911",
+    location: [
+        106.643,
+        26.396
+    ],
+    record_time: "2025-06-18 07:20:25"
+} );
+
+db.getCollection("gpsinfo_2025-06-18").insert( {
+    _id: ObjectId("7"),
+    bus_no: "贵AU4911",
+    location: [
+        106.623,
+        26.376
+    ],
+    record_time: "2025-06-18 07:20:25"
+} );
+
+db.getCollection("gpsinfo_2025-06-18").insert( {
+    _id: ObjectId("8"),
+    bus_no: "贵AU4911",
+    location: [
+        106.653,
+        26.366
+    ],
+    record_time: "2025-06-18 07:20:25"
+} );
+
+db.getCollection("gpsinfo_2025-06-18").insert( {
+    _id: ObjectId("9"),
+    bus_no: "贵AU4911",
+    location: [
+        106.623,
+        26.366
+    ],
+    record_time: "2025-06-18 07:20:25"
+} );
+
+db.getCollection("gpsinfo_2025-06-18").insert( {
+    _id: ObjectId("10"),
+    bus_no: "贵AU4911",
+    location: [
+        106.653,
+        26.396
+    ],
+    record_time: "2025-06-18 07:20:25"
+} );

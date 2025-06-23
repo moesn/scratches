@@ -60,17 +60,20 @@ DELETE FROM ums_sys_user_role WHERE user_id <= 1;
 INSERT INTO ums_sys_user_role (user_role_id, user_id, role_id, create_user, create_date, update_user, update_date) VALUES (0, 0, '0', NULL, NULL, NULL, NULL);
 INSERT INTO ums_sys_user_role (user_role_id, user_id, role_id, create_user, create_date, update_user, update_date) VALUES (1, 1, '1', NULL, NULL, NULL, NULL);
 
+-- root菜单授权
 SELECT * FROM ums_sys_role_function WHERE role_id = 0;
 DELETE FROM ums_sys_role_function WHERE role_id = 0;
 INSERT INTO ums_sys_role_function (role_id, function_id, value)
-SELECT 0, menu_code, 15
-FROM ums_sys_menus;
+SELECT 0, menu_code, 15 FROM ums_sys_menus WHERE status = 1;
 
+-- super菜单授权
 SELECT * FROM ums_sys_role_function WHERE role_id = 1;
 DELETE FROM ums_sys_role_function WHERE role_id = 1;
 INSERT INTO ums_sys_role_function (role_id, function_id, value)
-SELECT 1, menu_code, 15
-FROM ums_sys_menus
-WHERE menu_type = 'system'
-   OR menu_code = 'base'
-   OR menu_code = 'dsm_web';
+SELECT 1, menu_code, 15 FROM ums_sys_menus WHERE status = 1 AND menu_type = 'system' OR menu_code = 'base' OR menu_code = 'dsm_web';
+
+-- admin1菜单授权
+DELETE FROM ums_sys_role_function WHERE role_id = (SELECT role_id FROM sys_user_role WHERE user_id = (SELECT user_id FROM ums_sys_user WHERE user_name = 'admin1'));
+INSERT INTO ums_sys_role_function (role_id, function_id, value)
+SELECT (SELECT role_id FROM sys_user_role WHERE user_id = (SELECT user_id FROM ums_sys_user WHERE user_name = 'admin1')), menu_code, 15 FROM ums_sys_menus WHERE status = 1 AND menu_type = 'builtIn'
+
