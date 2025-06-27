@@ -1,20 +1,2 @@
-{
-    "id": 11,
-    "title": "设备信息管理/删除设备信息",
-    "businessType": 3,
-    "method": "org.github.zuuuyao.web.info.DeviceController.delDevice()",
-    "requestMethod": "DELETE",
-    "operatorType": 1,
-    "operAccount": "admin",
-    "operName": "张三",
-    "operRoleNames": "超级管理员",
-    "operUrl": "/kab/device/delDevice",
-    "operIp": "192.168.30.123",
-    "operLocation": "",
-    "operParam": "{\"ids\":[1]}",
-    "jsonResult": "{}",
-    "status": 0,
-    "errorMsg": "",
-    "operTime": "2025-06-14T11:05:51",
-    "costTime": 185194
-}
+中国共产党、中共一大、红船、井冈山、长征、延安、毛泽东、习近平、入党
+党旗、党徽、、红色、伟大复兴、不忘初心、南昌、革命先烈

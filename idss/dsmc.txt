@@ -1,64 +1,348 @@
-负责产品线Web前端开发人员的KPI设计
+数据标签管理
+原型图：http://172.16.0.28/OK61YJ/#id=ibcu5x&p=%E6%95%B0%E6%8D%AE%E6%A0%87%E7%AD%BE%E7%AE%A1%E7%90%86&g=1
+新增接口：/sdd/taginfo/add
+POST参数：{
+  "tagName": "数据标签名称",
+  "templateId": 1,     // 标准组ID
+  "description": "标签描述",
+  "markMethod": 0,     // "标注方法 （0:按数据内容 1:按存储路径）",
+  "fieldIds": "1,2,3",     // 关联数据类型ID，多值,号分割
+  "fieldLogic": 0,       // 0：任意包含、1：全部包含、2：部分包含
+  "fieldNum": 2,       // 部分包含时需配置数量
+  "businessId": 1,     // 业务系统ID
+  "actionType": 1,     // 数据资产类型( 1数据、2文件)
+  "schemaName": "实例名/库名 或者 文件目录",
+  "tableName": "表名正则 或者 文件名正则",
+  "enable": 1          // 是否启用（0:否 1:是）
+}
+返回值：{
+  "code": 200,
+  "message": ""
+}
+更新接口：/sdd/taginfo/update
+POST参数：{
+"id": 1   // 标签ID
+  "tagName": "数据标签名称",
+  "templateId": 1,     // 标准组ID
+  "description": "标签描述",
+  "markMethod": 0,     // "标注方法 （0:按数据内容 1:按存储路径）",
+  "fieldIds": "1,2,3",     // 关联数据类型，多值,号分割
+  "fieldLogic": 0,       // 0：任意包含、1：全部包含、2：部分包含
+  "fieldNum": 2,       // 部分包含时需配置数量
+  "businessId": 1,     // 业务系统ID
+  "actionType": 1,     // 数据资产类型( 1数据、2文件)
+  "schemaName": "实例名/库名 或者 文件目录",
+  "tableName": "表名正则 或者 文件名正则",
+  "enable": 1          // 是否启用（0:否 1:是）
+}
+返回值：{
+  "code": 200,
+  "message": ""
+}
+删除接口：/sdd/taginfo/del
+POST参数：{
+"id": 1   // 标签ID
+}
+返回值：{
+  "code": 200,
+  "message": ""
+}
+查询接口：/sdd/taginfo/list
+POST参数：{
+  "pageSize": 10,       // 每页大小
+  "pageNum": 1,       // 页数
+  "s": {
+"tagName": "标签名称",
+"enable": 1          // 标签状态（0:禁用 1: 启用）
+  }
+}
+返回值：{
+    "code": 200,
+    "message": "",
+    "page": {
+        "total": 4,
+        "totalPage": 4,
+        "pageNum": 1,
+        "pageSize": 1
+    },
+    "data": [
+        {
+            "id": 2,
+            "createUser": 100000,
+            "updateUser": 100000,
+            "createTime": 1748930790000,     // 创建时间
+            "updateTime": 1748930790000,
+            "tagName": "企业信息",           // 标签名称
+            "templateId": 1,
+            "description": "这是企业信息",    // 描述
+            "markMethod": 0,               // 标注方法（0:按数据内容 1:按存储路径）
+            "fieldIds": "9,12",
+            "fieldLogic": 2,                // 0：任意包含、1：全部包含、2：部分包含
+            "fieldNum": 1,                // 部分包含时需配置数量
+            "businessId": "",
+            "actionType": "",                    // 数据资产类型( 1数据、2文件)
+            "schemaName": "",                  // 实例名/库名 或者 文件目录
+            "tableName": "",                    // 表名 或者 文件名
+            "enable": 1,                         // 标签状态（0:禁用 1: 启用）
+            "tenantId": 2,
+            "templateGroupName": "移动",        // 标准组
+            "businessName": "",                  // 业务系统名称
+            "fieldNames": "手机号,网络客户编号",  // 关联数据类型名称，多值,号分割
+            "createUsername": "admin1"           // 创建人
+        }
+    ]
+}
+启用|禁用接口：/sdd/taginfo/enable
+POST参数：{
+  "id": 1,
+  "enable": 1,                         // 标签状态（0:禁用 1: 启用）
+}
+返回值：{
+  "code": 200,
+  "message": ""
+}
+导出接口：/sdd/taginfo/export
+POST参数：{
+"tagName": "标签名称",
+"enable": 1,          // 标签状态（0:禁用 1: 启用）
+"exportCustomColumns": []  // 自定义导出字段
+  }
+返回值：{
+  "code": 200,
+  "message": ""
+}
+模板下载接口：/sdd/taginfo/template
+返回文件流
+导入接口：/sdd/taginfo/import
+POST参数： form-data
+文件流
+file: "import.xlsx"
+返回值：{
+  "code": 200,
+  "message": "",
+  "data": "数据标签开始导入"
+}
+数据标签核查-结构化
+原型图：http://172.16.0.28/OK61YJ/#id=fh0j2o&p=%E5%88%86%E7%B1%BB%E5%88%86%E7%BA%A7%E4%BB%BB%E5%8A%A1%E6%A0%B8%E6%9F%A5-%E7%BB%93%E6%9E%84%E5%8C%96&g=1
+页面URL：
+https://192.168.30.41:8888/dsm_web/dsm-resource-center/dsm-classification-grade/sdd-class-grade-task-check-new?templateId=1&id=2&page=%7B%22total%22%3A1,%22totalPage%22%3A1,%22pageNum%22%3A1,%22pageSize%22%3A20%7D
+核查接口：/sdd/discoverTask/checkTableTag
+POST参数：{
+"id": 1,        // 表ID（主键）
+"taskId": 1,     // 任务ID
+"tagIds":[1,2,3]  // 标签ID数组
+}
+返回值：{
+  "code": 200,
+  "message": ""
+}
+数据标签核查-非结构化
+原型图：http://172.16.0.28/OK61YJ/#id=g04330&p=%E5%88%86%E7%B1%BB%E5%88%86%E7%BA%A7%E4%BB%BB%E5%8A%A1%E6%A0%B8%E6%9F%A5-%E9%9D%9E%E7%BB%93%E6%9E%84%E5%8C%96&g=1
+页面URL：
+https://192.168.30.41:8888/dsm_web/dsm-resource-center/dsm-classification-grade/sdd-class-grade-task-check-new?templateId=1&id=2&page=%7B%22total%22%3A1,%22totalPage%22%3A1,%22pageNum%22%3A1,%22pageSize%22%3A20%7D
+核查接口：/sdd/discoverTask/checkFileTag
+POST参数：{
+"id": 1,        // 文件ID（主键）
+"taskId": 1,     // 任务ID
+"tagIds":[1,2,3]  // 标签ID数组
+}
+返回值：{
+  "code": 200,
+  "message": ""
+}
+数据标注清单
+原型图：http://172.16.0.28/OK61YJ/#id=exyd9n&p=%E6%95%B0%E6%8D%AE%E6%A0%87%E6%B3%A8%E6%B8%85%E5%8D%95&g=1
+数据标注表清单接口-总数：/sdd/tableTagList/count
+POST参数：{
+  "templateId": 1,      // 标准组ID   必填
+  "departmentIds": [1,2],   // 业务部门ID
+  "systemIds": [1,2],       // 业务系统ID
+  "labelIds": [1,2],         // 分类ID
+  "gradeIds": [1,2],        // 分级ID
+  "ip": "10.10.10.1",        // 数据源IP
+  "tableName": "数据存储位置",
+  "tagIds": [1,2]           // 数据标签ID
+}
+返回值：{
+  "code": 200,
+  "message": "",
+  "data": 8        // 总条数
+}
+数据标注表清单接口-查询：/sdd/tableTagList/query
+POST参数：{
+    "pageSize": 10,
+    "pageNum": 1,
+    "s": {
+  "templateId": 1,      // 标准组ID  必填
+  "departmentIds": [1,2],   // 业务部门ID
+  "systemIds": [1,2],       // 业务系统ID
+  "labelIds": [1,2],         // 分类ID
+  "gradeIds": [1,2],        // 分级ID
+  "ip": "10.10.10.1",        // 数据源IP
+  "tableName": "数据存储位置",
+  "tagIds": [1,2]           // 数据标签ID
+}
+}
+返回值：{
+    "code": 200,
+    "message": "",
+    "page": {
+        "total": 0,
+        "totalPage": 0,
+        "pageNum": 1,
+        "pageSize": 1
+    },
+    "data": [
+        {
+            "id": 103,
+            "assetId": 4,
+            "assetName": "sqlserver2000",
+            "tableName": "[dbo].[Alphabetical list of products]",      // 数据存储位置
+            "address": "192.168.30.76",                           // 数据源IP
+            "port": "1043",                                      // 端口
+            "systemName": "研发业务系统",                       // 业务系统
+            "schemaName": "Northwind",                         // 数据源库名
+            "departName": "研发部门",                           // 业务部门
+            "gradeName": "第2级",                              // 数据分级
+            "labelNames": [                                    // 数据分类
+                "A1-6：集团客户信息"
+            ],
+            "fieldNames": [                                     // 数据类型
+                "客户实体编号",
+                "集团客户名称",
+                "其他"
+            ],
+            "protocolType": "SQLSERVER",                  // 数据源类型
+            "tagNames": [                              // 标签名称
+                "企业信息",
+                "个人信息"
+            ],
+            "tagTime": 1749456527000,                 // 数据标注时间
+            "instanceName": "",                        // 数据源实例名
+        }
+    ]
+}
+数据标注表清单接口-导出：  /sdd/tableTagList/export
+POST参数：{
+  "templateId": 1,      // 标准组ID  必填
+  "departmentIds": [1,2],   // 业务部门ID
+  "systemIds": [1,2],       // 业务系统ID
+  "labelIds": [1,2],         // 分类ID
+  "gradeIds": [1,2],        // 分级ID
+  "ip": "10.10.10.1",        // 数据源IP
+  "tableName": "数据存储位置",
+  "tagIds": [1,2]           // 数据标签ID
+}
+返回值：{
+  "code": 200,
+  "message": ""
+}
+数据标注文件清单接口-总数：
+/sdd/fileTagList/count
+POST参数：{
+  "templateId": 1,      // 标准组ID   必填
+  "departmentIds": [1,2],   // 业务部门ID
+  "systemIds": [1,2],       // 业务系统ID
+  "labelIds": [1,2],         // 分类ID
+  "gradeIds": [1,2],        // 分级ID
+  "ip": "10.10.10.1",        // 数据源IP
+  "tableName": "数据存储位置",
+  "tagIds": [1,2]           // 数据标签ID
+}
+返回值：{
+  "code": 200,
+  "message": "",
+  "data": 8        // 总条数
+}
+数据标注文件清单接口-查询：
+/sdd/fileTagList/query
+POST参数：{
+    "pageSize": 10,
+    "pageNum": 1,
+    "s": {
+  "templateId": 1,      // 标准组ID  必填
+  "departmentIds": [1,2],   // 业务部门ID
+  "systemIds": [1,2],       // 业务系统ID
+  "labelIds": [1,2],         // 分类ID
+  "gradeIds": [1,2],        // 分级ID
+  "ip": "10.10.10.1",        // 数据源IP
+  "tableName": "数据存储位置",
+  "tagIds": [1,2]           // 数据标签ID
+}
+}
+返回值：{
+    "code": 200,
+    "message": "",
+    "page": {
+        "total": 0,
+        "totalPage": 0,
+        "pageNum": 1,
+        "pageSize": 1
+    },
+    "data": [
+        {
+            "id": 103,
+            "assetId": 4,
+            "assetName": "ftptest",
+            "tableName": "42.docx",                              // 数据存储位置
+            "address": "192.168.30.76",                           // 数据源IP
+            "port": "21",                                        // 端口
+            "systemName": "研发业务系统",                       // 业务系统
+            "schemaName": "/jituan_test_data",                    // 文件目录
+            "departName": "研发部门",                           // 业务部门
+            "gradeName": "第2级",                              // 数据分级
+            "labelNames": [                                    // 数据分类
+                "A1-6：集团客户信息"
+            ],
+            "fieldNames": [                                     // 数据类型
+                "客户实体编号",
+                "集团客户名称",
+                "其他"
+            ],
+            "protocolType": "FTP",                      // 数据源类型
+            "tagNames": [                              // 标签名称
+                "企业信息",
+                "个人信息"
+            ],
+            "tagTime": 1749456527000,                 // 数据标注时间
+        }
+    ]
+}
+数据标注文件清单接口-导出：
+/sdd/fileTagList/export
+POST参数：{
+  "templateId": 1,      // 标准组ID  必填
+  "departmentIds": [1,2],   // 业务部门ID
+  "systemIds": [1,2],       // 业务系统ID
+  "labelIds": [1,2],         // 分类ID
+  "gradeIds": [1,2],        // 分级ID
+  "ip": "10.10.10.1",        // 数据源IP
+  "tableName": "数据存储位置",
+  "tagIds": [1,2]           // 数据标签ID
+}
+返回值：{
+  "code": 200,
+  "message": ""
+}
+文件分类分级核查
+页面URL：
+https://192.168.30.41:8888/dsm_web/dsm-resource-center/dsm-classification-grade/sdd-class-grade-task-check-new?templateId=1&id=2&page=%7B%22total%22%3A1,%22totalPage%22%3A1,%22pageNum%22%3A1,%22pageSize%22%3A20%7D
+界面变更（1）：取消对文件分类的设置
 
-以下KPI设计综合技术能力、项目交付、协作效率及业务价值，适用于独立负责全产品线前端工作的开发人员：
+界面变更（2）：增加 数据类型 列，该列可编辑（仅对非结构化文件dataCompose!=0）且多选，结构化文件（dataCompose=0）则只读
 
-一、技术能力与代码质量‌
+新增非结构化文件设置数据类型接口: /sdd/discoverTask/checkFileField
+POST参数：{
+"id": 1,        // 文件ID（主键）
+"taskId": 1,     // 任务ID
+"fieldIds":[1,2,3]  // 数据类型ID数组
+}
+返回值：{
+  "code": 200,
+  "message": ""
+}
+表分类分级核查
+页面URL：https://192.168.30.41:8888/dsm_web/dsm-resource-center/dsm-classification-grade/sdd-class-grade-task-check-new?templateId=1&id=2&page=%7B%22total%22%3A1,%22totalPage%22%3A1,%22pageNum%22%3A1,%22pageSize%22%3A20%7D
+界面变更（1）：取消对表分类的设置
 
-代码规范性‌，代码符合团队规范（如ESLint规则），Code Review评分≥4.5分（满分5分）；代码复用率≥30%（通过组件库、工具函数复用统计）。
 
-性能优化‌
-
-页面首屏加载时间≤1.5秒（核心页面达标率100%）；
-Lighthouse性能评分≥90分（关键页面全覆盖）。
-
-技术迭代能力‌
-
-每季度完成至少1项技术升级（如框架版本迁移、构建工具优化）并落地验证。
-二、项目交付与质量保障‌
-
-任务完成效率‌
-
-迭代需求按时交付率≥95%（基于Jira等项目管理工具统计）；
-紧急需求响应时效≤4小时（从需求确认到PR提交）。
-
-缺陷控制‌
-
-生产环境缺陷密度≤0.5个/千行代码（严重Bug占比＜20%）；
-缺陷修复平均时效≤2小时（非阻塞性问题）。
-
-测试覆盖‌
-
-单元测试覆盖率≥80%（核心组件强制要求）；
-E2E测试用例通过率100%（主流程全覆盖）。
-三、用户体验与产品价值‌
-
-体验指标‌
-
-用户操作成功率≥98%（通过埋点统计关键链路转化率）；
-跨端兼容性达标率100%（主流浏览器及移动端适配）。
-
-业务支撑‌
-
-需求反讲准确率100%（确保需求理解与产品目标一致）；
-每季度输出≥1份性能优化报告，推动业务指标提升（如降低跳出率）。
-四、协作与知识沉淀‌
-
-跨团队协作‌
-
-接口联调一次性通过率≥90%（减少前后端沟通成本）；
-需求变更影响评估及时性≤1工作日。
-
-知识共享‌
-
-每月输出≥1篇技术文档（如组件使用规范、性能优化方案）；
-年度内主导≥2次团队内部分享（主题需通过技术评审）。
-考核周期与数据来源‌
-考核维度	数据来源	周期
-代码质量	SonarQube报告、Code Review记录	月度
-性能指标	Lighthouse、埋点系统	季度
-项目交付	Jira任务状态、缺陷管理系统	迭代周期
-用户体验	用户反馈工单、A/B测试报告	半年度
-说明‌
-KPI权重建议：技术能力（40%）、项目交付（30%）、用户体验（20%）、协作能力（10%）；
-目标值需根据产品线复杂度动态调整，例如新业务线可降低代码复用率要求；
-需配套建立透明反馈机制，每月同步进度并记录调整依据。
