@@ -2,7 +2,6 @@
   color: #222B45;
   font-weight: 500;
   scrollbar-width: thin;
-  scrollbar-color: #a6bad8 transparent;
 }
 .dsm-light *::-webkit-scrollbar {
   width: 4px !important;
